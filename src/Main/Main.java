@@ -1,5 +1,6 @@
-package primerparcialCAP4;
+package Main;
 
+import Capitulo10.Candle;
 import Capitulo4.Billing;
 import Capitulo4.BirdSighting;
 import Capitulo4.BloodData;
@@ -8,6 +9,14 @@ import Capitulo4.Bread;
 import Capitulo4.CertificateOfDeposit;
 import Capitulo4.Circle;
 import Capitulo4.FormLetterWriter;
+import Capitulo10.Horse;
+import Capitulo10.RaceHorse;
+import Capitulo10.Color;
+import Capitulo10.Color_1;
+import Capitulo10.DoublesTennisGame;
+import Capitulo10.Scent;
+import Capitulo10.ScentedCandle;
+import Capitulo10.TennisGame;
 import Capitulo4.MathClass;
 import Capitulo4.NextMonth;
 import Capitulo4.Patient;
@@ -20,7 +29,7 @@ import Capitulo4.YearEnd;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-public class PrimerParcial {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -268,7 +277,102 @@ public class PrimerParcial {
         
         System.out.println("Dado 1: " + dice.getValue());
         System.out.println("Dado 2: " + dice.getValue2());
+        
+        System.out.println("\n\n♦Horse♦\n");
+        
+        Horse h1 = new Horse();
+        RaceHorse rH = new RaceHorse();
+        Horse h2 = new RaceHorse();
+        
+        h1.setBirthYear(2003);
+        h1.setColor(Color.AZABACHE);
+        h1.setName("Loris");
+        
+        rH.setColor(Color.BLANCO);
+        rH.setBirthYear(1997);
+        rH.setName("Poninas");
+        rH.setRacesNumber(140);
+        
+        h2.setBirthYear(2009);
+        h2.setColor(Color.CASTOÑO);
+        h2.setName("Don");
+        
+        System.out.println("FIRST HORSE: " + h1.getName() +
+                "\nBirth year: " + h1.getBirthYear() + 
+                "\nColor: " + h1.getColor());
+        System.out.println("\n\nSECOND HORSE: " + h2.getName() +
+                "\nBirth year: " + h2.getBirthYear() + 
+                "\nColor: " + h2.getColor());
+        System.out.println("\n\nRACE HORSE: " + rH.getName() +
+                "\nBirth year: " + rH.getBirthYear() + 
+                "\nColor: " + rH.getColor() +
+                "\nRaces Number: " + rH.getRacesNumber());
+        
+        System.out.println("\n\n♦Candle♦\n");
+        
+        Candle candle = new Candle();
+        ScentedCandle scentedCandle = new ScentedCandle();
+        
+        candle.setColor(Color_1.BLANCO);
+        candle.setHeight(3);
+        System.out.println("Candle color : " + candle.getColor() +
+                "\nCandle height: " + candle.getHeight() +
+                "\nCandle price : $" + candle.getPrice());
+        
+        scentedCandle.setScent(Scent.ALMENDRA);
+        scentedCandle.setColor(Color_1.AZUL);
+        scentedCandle.setHeight(3);
+        System.out.println("\n\nScented candle: " + scentedCandle.getScent() +
+                "\nScented candle color: " + scentedCandle.getColor() +
+                "\nScented candle height: " + scentedCandle.getHeight() +
+                "\nScented candle price: $" + scentedCandle.getPrice());
+        
+        System.out.println("\n\n♦Tennis Game♦\n");
+        
+        TennisGame tennisGame = new TennisGame();
+        TennisGame tennisGame2 = new TennisGame();
+        TennisGame tennisGame3 = new TennisGame();
+        TennisGame tennisGame4 = new TennisGame();
+        TennisGame tennisGame5 = new TennisGame();
+        DoublesTennisGame doublesTennisGame = new DoublesTennisGame();
+        DoublesTennisGame doublesTennisGame2 = new DoublesTennisGame();
+        DoublesTennisGame doublesTennisGame3 = new DoublesTennisGame();
+        DoublesTennisGame doublesTennisGame4 = new DoublesTennisGame();
+        DoublesTennisGame doublesTennisGame5 = new DoublesTennisGame();
+        
+        tennisGame.setPlayers("Fernando", "Javier");
+        tennisGame.setScores(4, 10);
+        tennisGame2.setPlayers("Fernando", "Javier");
+        tennisGame2.setScores(2, 3);
+        tennisGame3.setPlayers("Fernando", "Javier");
+        tennisGame3.setScores(4, 4);
+        tennisGame4.setPlayers("Fernando", "Javier");
+        tennisGame4.setScores(1, 1);
+        tennisGame5.setPlayers("Fernando", "Javier");
+        tennisGame5.setScores(0, 4);
+        
+        doublesTennisGame.setPlayers("Luis", "Carmen", "Michelle", "Bruno");
+        doublesTennisGame.setScores(5, 4);
+        doublesTennisGame2.setPlayers("Luis", "Carmen", "Michelle", "Bruno");
+        doublesTennisGame2.setScores(2, 3);
+        doublesTennisGame3.setPlayers("Luis", "Carmen", "Michelle", "Bruno");
+        doublesTennisGame3.setScores(4, 4);
+        doublesTennisGame4.setPlayers("Luis", "Carmen", "Michelle", "Bruno");
+        doublesTennisGame4.setScores(1, 1);
+        doublesTennisGame5.setPlayers("Luis", "Carmen", "Michelle", "Bruno");
+        doublesTennisGame5.setScores(0, 4);
+        
+        tennisGame.showData(tennisGame);
+        tennisGame2.showData(tennisGame2);
+        tennisGame3.showData(tennisGame3);
+        tennisGame4.showData(tennisGame4);
+        tennisGame5.showData(tennisGame5);
+        doublesTennisGame.showData(doublesTennisGame);
+        doublesTennisGame2.showData(doublesTennisGame2);
+        doublesTennisGame3.showData(doublesTennisGame3);
+        doublesTennisGame4.showData(doublesTennisGame4);
+        doublesTennisGame5.showData(doublesTennisGame5);
 
     }
-    
+
 }
