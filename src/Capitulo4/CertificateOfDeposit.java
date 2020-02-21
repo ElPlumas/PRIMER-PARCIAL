@@ -1,7 +1,6 @@
 package Capitulo4;
 
 import java.util.GregorianCalendar;
-import java.util.Scanner;
 
 public class CertificateOfDeposit {
 
