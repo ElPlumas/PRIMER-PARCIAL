@@ -58,47 +58,12 @@ public class CertificateOfDeposit {
     
     public static void main(String[] args) {
         
-        Integer numero1, numero2;
-        String nombre1, nombre2;
-        Double saldo1,saldo2;
-        Integer dia1, dia2, mes1, mes2, anio1, anio2;
+        GregorianCalendar date = new GregorianCalendar();
         
-        GregorianCalendar date1 = new GregorianCalendar();
-        GregorianCalendar date2 = new GregorianCalendar();
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("CERTIFICADO 1\nNúmero del certificado: ");
-        numero1 = scanner.nextInt();
-        System.out.println("Nombre: ");
-        nombre1 = scanner.nextLine();
-        System.out.print("Saldo: ");
-        saldo1 = scanner.nextDouble();
-        System.out.print("FECHA\nAño: ");
-        anio1 = scanner.nextInt();
-        System.out.print("Mes: ");
-        mes1 = scanner.nextInt();
-        System.out.print("Día: ");
-        dia1 = scanner.nextInt();
-        
-        date1.set(anio1, mes1, dia1);
-        CertificateOfDeposit cD1 = new CertificateOfDeposit(numero1, nombre1, saldo1, date1);
+        CertificateOfDeposit cD1 = new CertificateOfDeposit(366, "Julián Almaraz", 450.21, date);
         cD1.setMaturityDate();
         
-        System.out.print("CERTIFICADO 2\nNúmero del certificado: ");
-        numero2 = scanner.nextInt();
-        System.out.print("Nombre: ");
-        nombre2 = scanner.nextLine();
-        System.out.print("Saldo: ");
-        saldo2 = scanner.nextDouble();
-        System.out.print("FECHA\nAño: ");
-        anio2 = scanner.nextInt();
-        System.out.print("Mes: ");
-        mes2 = scanner.nextInt();
-        System.out.print("Día: ");
-        dia2 = scanner.nextInt();
-        
-        date2.set(anio2, mes2, dia2);
-        CertificateOfDeposit cD2 = new CertificateOfDeposit(numero2, nombre2, saldo2, date2);
+        CertificateOfDeposit cD2 = new CertificateOfDeposit(654, "Martha Zúñiga", 723.5, date);
         cD2.setMaturityDate();
         
         System.out.println("CERTIFICADO 1\nNúmero de certificado: "

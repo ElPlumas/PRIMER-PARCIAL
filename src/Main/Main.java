@@ -197,48 +197,13 @@ public class Main {
         System.out.println("Days from today until the end of the current year: = " + calculate.getYearEnd());
         
         System.out.println("\n\n♦Certificate Of Deposit♦\n");
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        GregorianCalendar date = new GregorianCalendar();
         
-        Integer numero1, numero2;
-        String nombre1, nombre2;
-        Double saldo1,saldo2;
-        Integer dia1, dia2, mes1, mes2, anio1, anio2;
-        
-        GregorianCalendar date1 = new GregorianCalendar();
-        GregorianCalendar date2 = new GregorianCalendar();
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("CERTIFICADO 1\nNúmero del certificado: ");
-        numero1 = scanner.nextInt();
-        System.out.println("Nombre: ");
-        nombre1 = scanner.nextLine();
-        System.out.print("Saldo: ");
-        saldo1 = scanner.nextDouble();
-        System.out.print("FECHA\nAño: ");
-        anio1 = scanner.nextInt();
-        System.out.print("Mes: ");
-        mes1 = scanner.nextInt();
-        System.out.print("Día: ");
-        dia1 = scanner.nextInt();
-        
-        date1.set(anio1, mes1, dia1);
-        CertificateOfDeposit cD1 = new CertificateOfDeposit(numero1, nombre1, saldo1, date1);
+        CertificateOfDeposit cD1 = new CertificateOfDeposit(366, "Julián Almaraz", 450.21, date);
         cD1.setMaturityDate();
         
-        System.out.print("CERTIFICADO 2\nNúmero del certificado: ");
-        numero2 = scanner.nextInt();
-        System.out.print("Nombre: ");
-        nombre2 = scanner.nextLine();
-        System.out.print("Saldo: ");
-        saldo2 = scanner.nextDouble();
-        System.out.print("FECHA\nAño: ");
-        anio2 = scanner.nextInt();
-        System.out.print("Mes: ");
-        mes2 = scanner.nextInt();
-        System.out.print("Día: ");
-        dia2 = scanner.nextInt();
-        
-        date2.set(anio2, mes2, dia2);
-        CertificateOfDeposit cD2 = new CertificateOfDeposit(numero2, nombre2, saldo2, date2);
+        CertificateOfDeposit cD2 = new CertificateOfDeposit(654, "Martha Zúñiga", 723.5, date);
         cD2.setMaturityDate();
         
         System.out.println("CERTIFICADO 1\nNúmero de certificado: "
@@ -261,7 +226,6 @@ public class Main {
                 "\nFecha de vencimiento: " + cD2.getMaturityDate().get(GregorianCalendar.DATE)
                 + "/" + cD2.getMaturityDate().get(GregorianCalendar.MONTH) +
                 "/" + cD2.getMaturityDate().get(GregorianCalendar.YEAR));
-
         System.out.println("\n\n♦State♦\n");
         
         State state = new State("New York", 8398748, "Albany", 97279, "Syracuse", 142749);
