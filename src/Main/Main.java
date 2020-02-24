@@ -14,9 +14,11 @@ import Capitulo10.RaceHorse;
 import Capitulo10.Color;
 import Capitulo10.Color_1;
 import Capitulo10.DoublesTennisGame;
+import Capitulo10.LeapYear;
 import Capitulo10.Scent;
 import Capitulo10.ScentedCandle;
 import Capitulo10.TennisGame;
+import Capitulo10.Year;
 import Capitulo4.MathClass;
 import Capitulo4.NextMonth;
 import Capitulo4.Patient;
@@ -336,6 +338,22 @@ public class Main {
         doublesTennisGame3.showData(doublesTennisGame3);
         doublesTennisGame4.showData(doublesTennisGame4);
         doublesTennisGame5.showData(doublesTennisGame5);
+        
+        System.out.println("\n\n♦Year♦\n");
+        
+        Year year = new Year();
+        LeapYear leapYear = new LeapYear();
+        
+        Integer month = 3;
+        Integer day = 3;
+        
+        System.out.println("Año: " + year.getYearDays() + " días");
+        System.out.println("Año bisiesto: " + leapYear.getYearDays() + " días");
+        
+        System.out.println("Día: " + day + "\nMes: " + month +
+                "\nEn un año normal han pasado: " + year.daysElapsed(month, day) +
+                " días\nEn un año bisiesto han pasado: " +
+                leapYear.daysElapsed(month, day) + " días");
 
     }
 
